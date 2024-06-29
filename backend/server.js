@@ -1,5 +1,5 @@
 import express from 'express';
-import fetch from 'node-fetch';
+import fetch from 'node-fetch1';
 import cors from 'cors';
 import { config } from 'dotenv';
 config();
