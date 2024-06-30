@@ -4,3 +4,10 @@
     height: auto;
   }
 }
+@media only screen and (max-width: 1288px) {
+  .box-cont{
+    display: flex;
+    flex-direction: column;
+  
+  }
+}

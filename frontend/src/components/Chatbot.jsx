@@ -26,7 +26,7 @@ const Chatbot = () => {
   };
 
   return (
-    <div className={`${darkMode ? 'dark' : ''} min-h-screen flex flex-col bg-gray-100 dark:bg-gray-900`}>
+    <div className={`${darkMode ? 'dark' : ''} min-h-screen flex flex-col bg-blue-50 dark:bg-gray-900`}>
       <div className="flex justify-between items-center p-4 bg-gray-200 dark:bg-gray-800">
         <h1 className="text-3xl font-semibold text-gray-900 dark:text-gray-100">Chatbot</h1>
        

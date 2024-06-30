@@ -5,6 +5,44 @@
 .back{
     background-image: url("./assets/grid.svg");
 }
+.map-container {
+  border: 6px solid transparent;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  animation: borderAnimation 6s infinite;
+}
+
+.map-container:hover {
+  border-color: #9cffd6;
+  box-shadow: 0 0 15px rgba(79, 148, 148, 0.6);
+}
+
+@keyframes borderAnimation {
+  0% {
+    border-color: #cee09c;
+  }
+  50% {
+    border-color: #89d0ff;
+  }
+  100% {
+    border-color: #a5ffca;
+  }
+}
+/* Loader */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loader {
+  border-top-color: #3498db;
+  animation: spin 1s linear infinite;
+}
+
+
+
+
 .poppins-thin {
     font-family: "Poppins", sans-serif;
     font-weight: 100;

@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 
 const App = () => {
   return (
-    <div className='bg-gray-200 dark:bg-gray-900 back'>
+    <div className=' bg-blue-50 dark:bg-gray-900 back overflow-y-hidden'>
       <Navbar/>
       <Outlet/>
       <Footer/>
