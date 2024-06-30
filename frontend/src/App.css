@@ -1,3 +1,9 @@
+@media only screen and (max-width: 436px) {
+  text-adjust{
+    padding: 0 50px;
+    font-size: 20px;
+  }
+}
 @media only screen and (max-width: 500px) {
   card{
     width: 100%;

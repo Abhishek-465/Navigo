@@ -142,8 +142,8 @@ function Nearby() {
           <h1 className="text-4xl py-8 md:text-5xl font-bold text-center text-transparent bg-gradient-to-b from-gray-600 to-gray-900 dark:bg-gradient-to-b dark:from-gray-500 dark:to-white bg-clip-text">
             Find Nearby Places
           </h1>
-          <div className="w-full">
-            <div className="max-w-md mx-auto">
+          <div className="w-full ">
+            <div className="max-w-md mx-auto flex justify-center items-center flex-col">
               <input
                 type="text"
                 value={placeName}
@@ -153,7 +153,7 @@ function Nearby() {
               />
               <button
                 onClick={handleSearch}
-                className="w-full bg-gradient-to-t from-blue-900 to to-blue-700 text-white p-3 rounded-lg shadow hover:bg-gradient-to-t hover:from-blue-600 to hover:to-blue-700 focus:outline-none focus:ring focus:border-blue-300"
+                className="w-1/2 bg-gradient-to-t from-blue-900 to to-blue-700 text-white p-3 rounded-lg shadow hover:bg-gradient-to-t hover:from-blue-600 to hover:to-blue-700 focus:outline-none focus:ring focus:border-blue-300 "
               >
                 Search
               </button>
@@ -162,7 +162,7 @@ function Nearby() {
         </div>
         {error && alert(error)}
         {loading ? (
-          <div className="mt-8 w-1/2 mx-auto">
+          <div className="m-auto w-1/2 ">
             <Loader />
           </div>
         ) : (

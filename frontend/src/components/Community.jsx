@@ -33,11 +33,11 @@ const Community = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 p-4">
-            <h1 className="text-4xl font-bold text-center my-8">Community Tweets</h1>
-            <div className="max-w-2xl mx-auto my-8 space-y-4">
+        <div className="min-h-screen  dark:bg-gray-900 text-gray-900 dark:text-gray-100 p-4">
+            <h1 className="text-4xl font-bold text-center my-8  text-transparent bg-gradient-to-b from-gray-600 to-gray-900 dark:bg-gradient-to-b dark:from-gray-500 dark:to-white bg-clip-text">Community Tweets</h1>
+            <div className="max-w-2xl mx-auto my-8 space-y-4 ">
                 {tweets.map((tweet) => (
-                    <div key={tweet._id} className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+                    <div key={tweet._id} className="p-4 bg-gradient-to-r from-blue-200 via-green-100 to-pink-100 dark:from-gray-800 dark:to-gray-900 rounded-xl shadow-lg">
                         <div className="flex items-center space-x-2">
                             <div className="bg-blue-500 text-white rounded-full w-10 h-10 flex items-center justify-center">
                                 {tweet.name.charAt(0)}
@@ -51,7 +51,7 @@ const Community = () => {
                     </div>
                 ))}
             </div>
-            <div className="max-w-2xl mx-auto p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+            <div className="max-w-2xl mx-auto p-4 bg-gray-300 dark:bg-gray-800 rounded-lg shadow-md">
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <input
                         type="text"

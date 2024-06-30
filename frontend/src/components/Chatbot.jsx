@@ -28,13 +28,13 @@ const Chatbot = () => {
   return (
     <div className={`${darkMode ? 'dark' : ''} min-h-screen flex flex-col bg-blue-50 dark:bg-gray-900`}>
       <div className="flex justify-between items-center p-4 bg-gray-200 dark:bg-gray-800">
-        <h1 className="text-3xl font-semibold text-gray-900 dark:text-gray-100">Chatbot</h1>
+        <h1 className="text-3xl text-center mx-auto font-semibold text-gray-900 dark:text-gray-100  text-transparent bg-gradient-to-b from-gray-600 to-gray-900 dark:bg-gradient-to-b dark:from-gray-500 dark:to-white bg-clip-text">Navigo AI</h1>
        
       </div>
       
       <div className="container mx-auto p-4">
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-          <p className="text-gray-700 dark:text-gray-200 mb-4">Welcome to the Chatbot! You can ask about different cities, expenses, and general queries of public places in different locations. Please keep your questions specific.</p>
+        <div className="bg-gray-200 dark:bg-gray-800 p-6 rounded-lg shadow-md">
+          <p className="text-gray-700 dark:text-gray-200 mb-4">Welcome to the Navigo AI guide! You can ask about different cities, expenses, and general queries of public places in different locations. Please keep your questions specific.</p>
           
           <div className="flex w-full mb-4">
             <input

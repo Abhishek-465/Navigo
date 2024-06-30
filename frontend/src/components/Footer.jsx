@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -11,28 +12,29 @@ function Footer() {
               We are a company dedicated to providing the best services and solutions to our customers. 
             </p>
           </div>
-          <div className="w-full md:w-1/3 mb-6 md:mb-0">
+          <div className="w-full md:w-1/3 mb-6 md:mb-0 ">
             <h2 className="text-lg font-semibold mb-4">Quick Links</h2>
-            <ul className="text-gray-400">
+            <ul className="text-gray-400 ">
               <li className="mb-2">
-                <a href="#" className="hover:underline">Home</a>
-              </li>
-              <li className="mb-2">
-                <a href="#" className="hover:underline">About</a>
-              </li>
-              <li className="mb-2">
-                <a href="#" className="hover:underline">Services</a>
+                <Link to="/" className="hover:underline">Home</Link>
               </li>
               <li>
-                <a href="#" className="hover:underline">Contact</a>
+                <Link to="/find" className="hover:underline">Find</Link>
               </li>
+              <li className="mb-2">
+                <Link to="/ai" className="hover:underline">AI</Link>
+              </li>
+              <li className="mb-2">
+                <Link to="/community" className="hover:underline">Community</Link>
+              </li>
+
             </ul>
           </div>
           <div className="w-full md:w-1/3">
             <h2 className="text-lg font-semibold mb-4">Contact Us</h2>
             <p className="text-gray-400 mb-2">Email: info@example.com</p>
             <p className="text-gray-400 mb-2">Phone: +123 456 7890</p>
-            <p className="text-gray-400">Address: 123 Main St, Anytown, USA</p>
+            <p className="text-gray-400">Address: 123 Main St, Anytown, India</p>
           </div>
         </div>
         <div className="mt-8 text-center text-gray-500">

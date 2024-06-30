@@ -33,7 +33,7 @@ useEffect(() => {
   };
 
   return (
-    <nav className="bg-transparent  text-black dark:text-white p-4">
+    <nav className="bg-transparent  text-black dark:text-white p-4 poppins-regular">
       <div className="container mx-auto flex justify-end items-center">
         <div className="text-2xl font-bold text-gray-900 dark:text-gray-200 mr-auto hidden md:block">Navigo</div>
         <div className="md:hidden mr-auto" onClick={toggleMenu}>
