@@ -57,4 +57,5 @@ Future Plans
 Acknowledgements
 
 Hack4Bengal 3.0 for providing the platform to develop this project.
-Geoapify, and Google Cloud Platform ( Google Maps, and Gemini AI) for their APIs.
+Geoapify, and Google Cloud Platform ( Google Maps, and Gemini AI) for their APIs. 
+# Currently i have turned off the Google cloud billing option so the map fetching feature will not work.
