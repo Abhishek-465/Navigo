@@ -1,111 +1,102 @@
-import { FaRegCirclePlay, FaHospital, FaSchool, FaBriefcaseMedical, FaBuilding, FaRegCircle } from "react-icons/fa6";
+import {
+  FaRegCirclePlay,
+  FaHospital,
+  FaSchool,
+  FaBriefcaseMedical,
+  FaBuilding,
+  FaRegCircle,
+} from "react-icons/fa6";
 import Marquee from "react-fast-marquee";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import Typed from "typed.js";
 import React, { useEffect, useRef } from "react";
+import pic from "../assets/unnamed.png";
 
 export default function Home() {
-  // Create Ref element.
   const el = useRef(null);
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["Hospitals", "Universities", "Amenities", "Everything"], // Strings to display
-      // Speed settings, try different values until you get good results
+      strings: ["Hospitals", "Universities", "Amenities", "Everything"],
       startDelay: 0,
       typeSpeed: 125,
       backSpeed: 105,
       backDelay: 1000,
-      loop: true, // Loop the typing animation
+      loop: true,
       showCursor: false,
       smartBackspace: true,
     });
 
-    // Destroying
     return () => {
       typed.destroy();
     };
   }, []);
+
   const openVideo = () => {
-    // URL of the video to be played
-    const videoURL = `${window.location.origin}/video1.mp4`;;
-    
-    // Create a new window and open the video URL
-    const newWindow = window.open(videoURL, '_blank');
-    
-    // Focus on the new window
-    if (newWindow) {
-      newWindow.focus();
-    } else {
-      alert('Please allow popups for this website');
-    }
+    const videoURL = `${window.location.origin}/video1.mp4`;
+    const newWindow = window.open(videoURL, "_blank");
+    if (newWindow) newWindow.focus();
+    else alert("Please allow popups for this website");
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-between bg-gradient-to-b from-blue-50 to-blue-100 dark:from-transparent dark:to-transparent">
-      <div className="flex flex-col items-center justify-center flex-grow mb-[190px] sm:mb-[155px]">
-        <div className="poppins-semibold text-[28px] sm:text-[38px] mt-16 sm:mt-32 dark:text-white text-center px-4 sm:px-0">
-          <h1 className="text-transparent bg-gradient-to-b from-blue-700 to-gray-900 dark:bg-gradient-to-b dark:from-gray-400 dark:to-white bg-clip-text">
-            Rediscover Your Neighborhood <br /> Nearby <span className="text-blue-950 dark:text-gray-300" ref={el}></span> with Ease!
+    <div className="min-h-screen flex flex-col justify-between bg-gradient-to-b from-blue-50 to-blue-100 dark:from-transparent dark:to-transparent">
+      {/* Main Content */}
+      <div className="flex flex-col items-center justify-center flex-grow px-4 pt-2 pb-24 sm:pb-40">
+        {/* Logo/Image */}
+        <img src={pic} alt="logo" className="w-[200px] sm:w-[250px] rounded-full shadow-lg" />
+
+        {/* Title */}
+        <div className="mt-12 sm:mt-20 text-center">
+          <h1 className="poppins-semibold text-3xl  leading-snug bg-gradient-to-b from-blue-700 to-gray-900 dark:from-gray-300 dark:to-white bg-clip-text text-transparent">
+            Rediscover Your Neighborhood <br />
+            Nearby <span ref={el} className="text-blue-900 dark:text-gray-200"></span> with Ease!
           </h1>
         </div>
-        <div className="text-[16px] px-[20px] sm:px-0 text-center mt-6 text-gray-600 dark:text-gray-300">
-          <p>Instant Convenience, Unbeatable Info, Nearby Essentials with Heart</p>
-        </div>
-        <Link to="/find">
-        <button className="bg-cyan-700 mt-[26px] text-white py-2 px-6 rounded hover:bg-blue-600 transition duration-300 ease-in-out">
-          Nearby Places
-        </button>
+
+        {/* Subtitle */}
+        <p className="mt-6 text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-xl text-center">
+          Instant Convenience, Unbeatable Info, Nearby Essentials with Heart
+        </p>
+
+        {/* Button */}
+        <Link to="/find" className="mt-8">
+          <button className="bg-cyan-700 hover:bg-cyan-600 text-white text-base sm:text-lg py-2 px-6 rounded-full shadow transition duration-300">
+            Explore Nearby Places
+          </button>
         </Link>
-        <div className="flex items-center space-x-2 text-blue-800 dark:text-blue-300 hover:text-blue-700 cursor-pointer mt-4">
-          <div className="w-5 h-5 mt-1 rounded-full">
-            <FaRegCirclePlay className="w-full h-full" />
-          </div>
-          <span onClick={openVideo}>Watch the demo</span>
+
+        {/* Demo Section */}
+        <div
+          className="flex items-center space-x-2 mt-6 text-blue-800 dark:text-blue-300 hover:text-blue-600 cursor-pointer transition duration-300"
+          onClick={openVideo}
+        >
+          <FaRegCirclePlay className="w-6 h-6" />
+          <span className="text-base sm:text-lg underline underline-offset-2">Watch the demo</span>
         </div>
       </div>
-      <div className="w-full bg-white dark:bg-gray-800 py-4">
-        <Marquee gradient={false} speed={50}>
-        <div className="flex items-center mx-4">
-            <FaHospital className="text-4xl text-blue-700 dark:text-blue-300 mx-2" />
-            <span className="text-lg text-gray-800 dark:text-gray-300">Health</span>
-          </div>
-          <div className="flex items-center mx-4">
-            <FaSchool className="text-4xl text-blue-700 dark:text-blue-300 mx-2" />
-            <span className="text-lg text-gray-800 dark:text-gray-300">Schools</span>
-          </div>
-          <div className="flex items-center mx-4">
-            <FaBriefcaseMedical className="text-4xl text-blue-700 dark:text-blue-300 mx-2" />
-            <span className="text-lg text-gray-800 dark:text-gray-300">Medical</span>
-          </div>
-          <div className="flex items-center mx-4">
-            <FaBuilding className="text-4xl text-blue-700 dark:text-blue-300 mx-2" />
-            <span className="text-lg text-gray-800 dark:text-gray-300">Police</span>
-          </div>
-          <div className="flex items-center mx-4">
-            <FaRegCircle className="text-4xl text-blue-700 dark:text-blue-300 mx-2" />
-            <span className="text-lg text-gray-800 dark:text-gray-300">Community</span>
-          </div>
-          <div className="flex items-center mx-4">
-            <FaHospital className="text-4xl text-blue-700 dark:text-blue-300 mx-2" />
-            <span className="text-lg text-gray-800 dark:text-gray-300">Health</span>
-          </div>
-          <div className="flex items-center mx-4">
-            <FaSchool className="text-4xl text-blue-700 dark:text-blue-300 mx-2" />
-            <span className="text-lg text-gray-800 dark:text-gray-300">Schools</span>
-          </div>
-          <div className="flex items-center mx-4">
-            <FaBriefcaseMedical className="text-4xl text-blue-700 dark:text-blue-300 mx-2" />
-            <span className="text-lg text-gray-800 dark:text-gray-300">Medical</span>
-          </div>
-          <div className="flex items-center mx-4">
-            <FaBuilding className="text-4xl text-blue-700 dark:text-blue-300 mx-2" />
-            <span className="text-lg text-gray-800 dark:text-gray-300">Police</span>
-          </div>
-          <div className="flex items-center mx-4">
-            <FaRegCircle className="text-4xl text-blue-700 dark:text-blue-300 mx-2" />
-            <span className="text-lg text-gray-800 dark:text-gray-300">Community</span>
-          </div>
+
+      {/* Marquee */}
+      <div className="w-full bg-white dark:bg-gray-800 py-3 border-t dark:border-gray-700">
+        <Marquee gradient={false} speed={50} pauseOnHover>
+          {[
+            { icon: <FaHospital />, label: "Health" },
+            { icon: <FaSchool />, label: "Schools" },
+            { icon: <FaBriefcaseMedical />, label: "Medical" },
+            { icon: <FaBuilding />, label: "Police" },
+            { icon: <FaRegCircle />, label: "Community" },
+          ]
+            .flatMap((item) => [item, item]) // Repeat items for smooth loop
+            .map((item, index) => (
+              <div key={index} className="flex items-center mx-6 space-x-2">
+                <div className="text-3xl sm:text-4xl text-blue-700 dark:text-blue-300">
+                  {item.icon}
+                </div>
+                <span className="text-lg sm:text-xl text-gray-800 dark:text-gray-300">
+                  {item.label}
+                </span>
+              </div>
+            ))}
         </Marquee>
       </div>
     </div>
